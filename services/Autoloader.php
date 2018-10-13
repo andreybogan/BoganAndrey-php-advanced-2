@@ -25,9 +25,6 @@ class Autoloader {
    * @param $className - Имя класса (и пространства имен), которое требуется загрузить.
    */
   public function loadClass($className) {
-    // base directory for the namespace prefix
-    $base_dir = __DIR__ . '/src/';
-
     // Проверяем использует ли класс namespace prefix.
     $len = strlen($this->prefix);
     if (strncmp($this->prefix, $className, $len) !== 0) {
